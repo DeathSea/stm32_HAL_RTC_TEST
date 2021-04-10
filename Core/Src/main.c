@@ -113,8 +113,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    HAL_RTC_GetDate(&hrtc, &rtcDataType, RTC_FORMAT_BIN);
     HAL_RTC_GetTime(&hrtc, &rtcTimeType, RTC_FORMAT_BIN);
+    HAL_RTC_GetDate(&hrtc, &rtcDataType, RTC_FORMAT_BIN);
     printf("%04d-%02d-%02d %02d:%02d:%02d\n", 2000+rtcDataType.Year, rtcDataType.Month, rtcDataType.Date, 
         rtcTimeType.Hours, rtcTimeType.Minutes, rtcTimeType.Seconds);
     HAL_Delay(1000);
